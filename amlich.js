@@ -57,7 +57,7 @@ const computeDateFromJulianDay = (jd) => {
   const e = c - floor((1461 * d) / 4);
   const m = floor((5 * e + 2) / 153);
   const day = e - floor((153 * m + 2) / 5) + 1;
-  const month = m + 3 - 12 * floor(m / 10) - 1;
+  const month = m + 3 - 12 * floor(m / 10);
   const year = b * 100 + d - 4800 + floor(m / 10);
 
   return {

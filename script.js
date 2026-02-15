@@ -69,7 +69,7 @@ function calculateSolarDates(lunarDay, lunarMonth, startYear, numYears) {
         // Kiểm tra month !== undefined vì có thể là 0
         let solarDate = {
           dd: solarResult.day,
-          mm: solarResult.month + 1, // Tháng trả về từ 0-11, cần +1
+          mm: solarResult.month,
           yy: solarResult.year,
         };
         dates.push({
