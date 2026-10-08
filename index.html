@@ -75,6 +75,12 @@
         </div>
 
         <div class="form-group">
+          <input type="checkbox" id="lunarLeap" />
+          <label for="lunarLeap">Tháng nhuận</label>
+          <span>(chỉ khi ngày gốc rơi vào tháng nhuận; năm không có tháng nhuận đó sẽ dùng tháng thường)</span>
+        </div>
+
+        <div class="form-group">
           <label for="eventTitle">Tiêu đề sự kiện:</label>
           <input
             type="text"
@@ -103,7 +109,7 @@
             max="50"
             required
           />
-          <span>(Từ năm hiện tại)</span>
+          <span>(Tính từ lần sắp tới)</span>
         </div>
 
         <div class="form-group reminder-group">
@@ -145,7 +151,6 @@
       </div>
     </div>
 
-    <script src="amlich.js"></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>
