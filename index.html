@@ -56,6 +56,63 @@
       "inLanguage": "vi-VN"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "inLanguage": "vi-VN",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Nhập file vào lịch trên máy tính thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Với Google Calendar, mở calendar.google.com, vào Cài đặt rồi chọn Nhập và xuất. Chọn file .ics vừa tải và lịch muốn thêm vào, sau đó bấm Nhập. Với Outlook hoặc Apple Calendar, bấm đúp vào file .ics để mở bằng ứng dụng đó."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trên điện thoại thì làm sao?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ứng dụng Google Calendar trên điện thoại không nhập được file. Cách chắc ăn nhất là chuyển file sang máy tính và nhập ở calendar.google.com như trên, sự kiện sẽ tự đồng bộ về điện thoại dùng cùng tài khoản Google. Bạn cũng có thể mở file bằng ứng dụng lịch có sẵn của máy (như app Lịch trên iPhone) hoặc Outlook, nếu ứng dụng đó cho nhập file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Khi nào cần tích ô Tháng nhuận?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Một số năm âm lịch có 13 tháng, tháng thêm vào gọi là tháng nhuận. Ví dụ năm 2025 có tháng 6 và tháng 6 nhuận. Chỉ tích ô này khi ngày gốc, chẳng hạn ngày mất, rơi vào tháng nhuận. Năm nào có tháng nhuận đó thì sự kiện nằm trong tháng nhuận, các năm khác dùng tháng thường, theo cách tính giỗ phổ biến."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chữ \"tháng thiếu\" trong danh sách ngày nghĩa là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tháng âm lịch có 29 hoặc 30 ngày, tháng chỉ có 29 ngày gọi là tháng thiếu. Nếu bạn nhập ngày 30 mà năm đó tháng ấy thiếu, sự kiện được giữ ở ngày 29 và ghi thêm \"tháng thiếu\" thay vì nhảy sang tháng sau."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sao mỗi năm lại là một sự kiện riêng?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chế độ lặp hằng năm của Google Calendar giữ nguyên ngày dương lịch, mà ngày âm lịch thì mỗi năm rơi vào một ngày dương khác, nên lặp theo cách đó sẽ lệch ngày. Vì vậy file có một sự kiện cho mỗi năm, ngày nào cũng đã tính sẵn. Nếu tạo lại file với cùng tiêu đề rồi nhập lần nữa, lịch nhận ra các sự kiện đã có nên không tạo bản trùng. Hết số năm đã chọn, bạn chỉ cần tạo file mới."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ngày âm lịch được tính theo lịch nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Theo âm lịch Việt Nam, tính ở múi giờ UTC+7. Âm lịch Trung Quốc dùng múi giờ UTC+8 nên thỉnh thoảng hai lịch không trùng ngày."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <main>
@@ -152,6 +209,68 @@
           <pre id="previewArea">Chưa có dữ liệu xem trước...</pre>
         </div>
       </div>
+
+      <section class="guide">
+        <h2>Hướng dẫn và câu hỏi thường gặp</h2>
+        <p>
+          Điền ngày, tháng âm lịch và tiêu đề, bấm Xem trước để xem các ngày dương lịch, rồi bấm Tạo File ICS để
+          tải file về. Sự kiện bắt đầu từ lần sắp tới và lặp lại theo số năm bạn chọn, tối đa 50 năm.
+        </p>
+
+        <details>
+          <summary>Nhập file vào lịch trên máy tính thế nào?</summary>
+          <p>
+            Với Google Calendar, mở calendar.google.com, vào Cài đặt rồi chọn Nhập và xuất. Chọn file .ics vừa tải
+            và lịch muốn thêm vào, sau đó bấm Nhập. Với Outlook hoặc Apple Calendar, bấm đúp vào file .ics để mở
+            bằng ứng dụng đó.
+          </p>
+        </details>
+
+        <details>
+          <summary>Trên điện thoại thì làm sao?</summary>
+          <p>
+            Ứng dụng Google Calendar trên điện thoại không nhập được file. Cách chắc ăn nhất là chuyển file sang máy
+            tính và nhập ở calendar.google.com như trên, sự kiện sẽ tự đồng bộ về điện thoại dùng cùng tài khoản
+            Google. Bạn cũng có thể mở file bằng ứng dụng lịch có sẵn của máy (như app Lịch trên iPhone) hoặc
+            Outlook, nếu ứng dụng đó cho nhập file.
+          </p>
+        </details>
+
+        <details>
+          <summary>Khi nào cần tích ô Tháng nhuận?</summary>
+          <p>
+            Một số năm âm lịch có 13 tháng, tháng thêm vào gọi là tháng nhuận. Ví dụ năm 2025 có tháng 6 và tháng 6
+            nhuận. Chỉ tích ô này khi ngày gốc, chẳng hạn ngày mất, rơi vào tháng nhuận. Năm nào có tháng nhuận đó
+            thì sự kiện nằm trong tháng nhuận, các năm khác dùng tháng thường, theo cách tính giỗ phổ biến.
+          </p>
+        </details>
+
+        <details>
+          <summary>Chữ "tháng thiếu" trong danh sách ngày nghĩa là gì?</summary>
+          <p>
+            Tháng âm lịch có 29 hoặc 30 ngày, tháng chỉ có 29 ngày gọi là tháng thiếu. Nếu bạn nhập ngày 30 mà năm
+            đó tháng ấy thiếu, sự kiện được giữ ở ngày 29 và ghi thêm "tháng thiếu" thay vì nhảy sang tháng sau.
+          </p>
+        </details>
+
+        <details>
+          <summary>Sao mỗi năm lại là một sự kiện riêng?</summary>
+          <p>
+            Chế độ lặp hằng năm của Google Calendar giữ nguyên ngày dương lịch, mà ngày âm lịch thì mỗi năm rơi vào
+            một ngày dương khác, nên lặp theo cách đó sẽ lệch ngày. Vì vậy file có một sự kiện cho mỗi năm, ngày nào
+            cũng đã tính sẵn. Nếu tạo lại file với cùng tiêu đề rồi nhập lần nữa, lịch nhận ra các sự kiện đã có nên
+            không tạo bản trùng. Hết số năm đã chọn, bạn chỉ cần tạo file mới.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ngày âm lịch được tính theo lịch nào?</summary>
+          <p>
+            Theo âm lịch Việt Nam, tính ở múi giờ UTC+7. Âm lịch Trung Quốc dùng múi giờ UTC+8 nên thỉnh thoảng hai
+            lịch không trùng ngày.
+          </p>
+        </details>
+      </section>
     </main>
 
     <script type="module" src="script.js"></script>
