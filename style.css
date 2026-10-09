@@ -62,7 +62,7 @@ h2 {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0072ed; /* the lightest #007bff that keeps white text at 4.5:1 */
   color: white;
   border: none;
   border-radius: 5px;

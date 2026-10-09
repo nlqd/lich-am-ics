@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
-    <title>Tạo Lịch Âm Lịch - Nhập vào Google Calendar (ICS)</title>
-    <meta name="title" content="Tạo Lịch Âm Lịch - Nhập vào Google Calendar, Outlook (ICS)" />
-    <meta name="description" content="Công cụ miễn phí tạo lịch sự kiện âm lịch (giỗ, tết âm, ngày kỷ niệm) có thể nhập trực tiếp vào Google Calendar, Outlook, Apple Calendar. Tự động tính toán và sinh file lịch hàng năm với nhắc nhở tùy chỉnh." />
+    <title>Tạo lịch giỗ âm lịch cho Google Calendar (file ICS)</title>
+    <meta name="title" content="Tạo lịch giỗ âm lịch cho Google Calendar (file ICS)" />
+    <meta name="description" content="Nhập ngày giỗ, Tết hay ngày kỷ niệm theo âm lịch, tải file ICS để thêm vào Google Calendar, Outlook hoặc Apple Calendar. Miễn phí, tính sẵn tới 50 năm." />
     <meta name="keywords" content="âm lịch, Google Calendar, lịch sự kiện, giỗ, tết âm, Outlook, Apple Calendar, sự kiện hàng năm, nhắc nhở, nhập lịch" />
-    <meta name="author" content="Dung Ngo" />
     <meta name="language" content="Vietnamese" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#4CAF50" />
@@ -18,16 +17,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://licham.dzungngo.com/" />
-    <meta property="og:title" content="Tạo Lịch Âm Lịch - Nhập vào Google Calendar" />
-    <meta property="og:description" content="Công cụ miễn phí tạo lịch sự kiện âm lịch (giỗ, tết âm, ngày kỷ niệm) có thể nhập trực tiếp vào Google Calendar. Tự động tính toán hàng năm với nhắc nhở tùy chỉnh." />
+    <meta property="og:title" content="Tạo lịch giỗ âm lịch cho Google Calendar (file ICS)" />
+    <meta property="og:description" content="Nhập ngày giỗ, Tết hay ngày kỷ niệm theo âm lịch, tải file ICS để thêm vào Google Calendar, Outlook hoặc Apple Calendar. Miễn phí, tính sẵn tới 50 năm." />
     <meta property="og:image" content="https://licham.dzungngo.com/og-image.png" />
     <meta property="og:locale" content="vi_VN" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://licham.dzungngo.com/" />
-    <meta name="twitter:title" content="Tạo Lịch Âm Lịch - Nhập vào Google Calendar" />
-    <meta name="twitter:description" content="Công cụ miễn phí tạo lịch sự kiện âm lịch (giỗ, tết âm, ngày kỷ niệm) có thể nhập vào Google Calendar. Tự động tính toán hàng năm với nhắc nhở." />
+    <meta name="twitter:title" content="Tạo lịch giỗ âm lịch cho Google Calendar (file ICS)" />
+    <meta name="twitter:description" content="Nhập ngày giỗ, Tết hay ngày kỷ niệm theo âm lịch, tải file ICS để thêm vào Google Calendar, Outlook hoặc Apple Calendar. Miễn phí, tính sẵn tới 50 năm." />
     <meta name="twitter:image" content="https://licham.dzungngo.com/og-image.png" />
 
     <!-- Additional Meta Tags -->
@@ -35,6 +34,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Lịch Âm Lịch" />
 
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
     <link rel="canonical" href="https://licham.dzungngo.com/" />
 
@@ -43,10 +43,11 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "Tạo Lịch Âm Lịch - Nhập vào Google Calendar",
-      "description": "Công cụ miễn phí tạo sự kiện âm lịch (giỗ, tết âm, ngày kỷ niệm) có thể nhập trực tiếp vào Google Calendar, Outlook, Apple Calendar với nhắc nhở tùy chỉnh hàng năm",
+      "name": "Tạo lịch giỗ âm lịch cho Google Calendar (file ICS)",
+      "description": "Nhập ngày giỗ, Tết hay ngày kỷ niệm theo âm lịch, tải file ICS để thêm vào Google Calendar, Outlook hoặc Apple Calendar. Miễn phí, tính sẵn tới 50 năm.",
       "url": "https://licham.dzungngo.com/",
-      "applicationCategory": "Productivity",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -57,99 +58,101 @@
     </script>
   </head>
   <body>
-    <h1>Tạo Sự Kiện Âm Lịch - Nhập vào Google Calendar</h1>
+    <main>
+      <h1>Tạo Sự Kiện Âm Lịch - Nhập vào Google Calendar</h1>
 
-    <div class="container">
-      <div class="form-section">
-        <h2>Nhập thông tin sự kiện</h2>
-        <div class="form-group">
-          <label for="lunarDay">Ngày Âm Lịch:</label>
-          <input type="number" id="lunarDay" min="1" max="30" required />
-          <span>(1-30)</span>
-        </div>
-
-        <div class="form-group">
-          <label for="lunarMonth">Tháng Âm Lịch:</label>
-          <input type="number" id="lunarMonth" min="1" max="12" required />
-          <span>(1-12)</span>
-        </div>
-
-        <div class="form-group">
-          <input type="checkbox" id="lunarLeap" />
-          <label for="lunarLeap">Tháng nhuận</label>
-          <span>(chỉ khi ngày gốc rơi vào tháng nhuận; năm không có tháng nhuận đó sẽ dùng tháng thường)</span>
-        </div>
-
-        <div class="form-group">
-          <label for="eventTitle">Tiêu đề sự kiện:</label>
-          <input
-            type="text"
-            id="eventTitle"
-            placeholder="VD: Giỗ Ông Nội"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="eventDescription">Mô tả sự kiện:</label>
-          <textarea
-            id="eventDescription"
-            rows="4"
-            placeholder="VD: Chuẩn bị đồ cúng, mời mọi người..."
-          ></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="repeatYears">Số năm lặp lại:</label>
-          <input
-            type="number"
-            id="repeatYears"
-            value="5"
-            min="1"
-            max="50"
-            required
-          />
-          <span>(Tính từ lần sắp tới)</span>
-        </div>
-
-        <div class="form-group reminder-group">
-          <label>Cài đặt nhắc nhở:</label>
-          <div>
-            <input type="checkbox" id="enableReminder" />
-            <label for="enableReminder">Bật nhắc nhở</label>
+      <div class="container">
+        <div class="form-section">
+          <h2>Nhập thông tin sự kiện</h2>
+          <div class="form-group">
+            <label for="lunarDay">Ngày Âm Lịch:</label>
+            <input type="number" id="lunarDay" min="1" max="30" required />
+            <span>(1-30)</span>
           </div>
-          <div
-            id="reminderOptions"
-            style="display: none; margin-top: 10px; padding-left: 20px"
-          >
-            <label for="reminderValue">Nhắc trước:</label>
+
+          <div class="form-group">
+            <label for="lunarMonth">Tháng Âm Lịch:</label>
+            <input type="number" id="lunarMonth" min="1" max="12" required />
+            <span>(1-12)</span>
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" id="lunarLeap" />
+            <label for="lunarLeap">Tháng nhuận</label>
+            <span>(chỉ khi ngày gốc rơi vào tháng nhuận; năm không có tháng nhuận đó sẽ dùng tháng thường)</span>
+          </div>
+
+          <div class="form-group">
+            <label for="eventTitle">Tiêu đề sự kiện:</label>
+            <input
+              type="text"
+              id="eventTitle"
+              placeholder="VD: Giỗ Ông Nội"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="eventDescription">Mô tả sự kiện:</label>
+            <textarea
+              id="eventDescription"
+              rows="4"
+              placeholder="VD: Chuẩn bị đồ cúng, mời mọi người..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="repeatYears">Số năm lặp lại:</label>
             <input
               type="number"
-              id="reminderValue"
-              value="1"
+              id="repeatYears"
+              value="5"
               min="1"
-              style="width: 60px"
+              max="50"
+              required
             />
-            <select id="reminderUnit">
-              <option value="minutes">phút</option>
-              <option value="hours">giờ</option>
-              <option value="days" selected>ngày</option>
-              <option value="weeks">tuần</option>
-            </select>
+            <span>(Tính từ lần sắp tới)</span>
+          </div>
+
+          <div class="form-group reminder-group">
+            <label>Cài đặt nhắc nhở:</label>
+            <div>
+              <input type="checkbox" id="enableReminder" />
+              <label for="enableReminder">Bật nhắc nhở</label>
+            </div>
+            <div
+              id="reminderOptions"
+              style="display: none; margin-top: 10px; padding-left: 20px"
+            >
+              <label for="reminderValue">Nhắc trước:</label>
+              <input
+                type="number"
+                id="reminderValue"
+                value="1"
+                min="1"
+                style="width: 60px"
+              />
+              <select id="reminderUnit">
+                <option value="minutes">phút</option>
+                <option value="hours">giờ</option>
+                <option value="days" selected>ngày</option>
+                <option value="weeks">tuần</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button id="previewBtn">Xem trước</button>
+            <button id="generateBtn">Tạo File ICS</button>
           </div>
         </div>
 
-        <div class="button-group">
-          <button id="previewBtn">Xem trước</button>
-          <button id="generateBtn">Tạo File ICS</button>
+        <div class="preview-section">
+          <h2>Xem trước danh sách ngày</h2>
+          <pre id="previewArea">Chưa có dữ liệu xem trước...</pre>
         </div>
       </div>
-
-      <div class="preview-section">
-        <h2>Xem trước danh sách ngày</h2>
-        <pre id="previewArea">Chưa có dữ liệu xem trước...</pre>
-      </div>
-    </div>
+    </main>
 
     <script type="module" src="script.js"></script>
   </body>
